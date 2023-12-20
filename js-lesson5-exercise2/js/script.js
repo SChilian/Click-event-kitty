@@ -5,6 +5,14 @@ var cat = document.querySelector(".cat");
 //console.log(cat);
 
 button.addEventListener("click", function () {
-    button.innerText = "It's working.";
-    cat.classList = "show-cat";
-});
+   if (cat.classList.contains("show")) {
+    //console.log ("Yes");
+    cat.classList.remove("show");
+    button.innerText = "Wait, come back!";
+    button.classList.add("disappear");
+   } else {//{console.log("No")};
+    cat.classList.add("show");
+    button.innerText = "Shoo, Cat!!";
+    button.classList.remove("disappear");
+   }
+}); 
